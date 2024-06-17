@@ -14,7 +14,6 @@ function App() {
 
     const form = e.currentTarget;
     const input = (form.elements.namedItem('text') as HTMLInputElement).value;
-    console.log(input);
     setText(input);
 
     form.reset();
