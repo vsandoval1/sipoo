@@ -31,9 +31,13 @@ export const getCat = async (text: string, options?: CatOptions): Promise<string
   if (fontSize) {
     params.append('fontSize', fontSize.toString());
   }
+
   if (fontColor) {
     params.append('fontColor', fontColor);
   }
+
+  params.append('fontColor', 'white');
+
   if (params.toString()) {
     url += `?${params.toString()}`;
   }
@@ -44,7 +48,7 @@ export const getCat = async (text: string, options?: CatOptions): Promise<string
       throw new Error('Error fetching cat image');
     }
     return response.url;
-
+    
   } catch (err) {
     console.log(err)
     throw err;

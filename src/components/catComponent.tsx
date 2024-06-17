@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCatImage, getCat } from '../services/catService';
+import { getCatImage, getCat } from '../services/cat-service';
 
 type CatOptions = {
   fontSize?: number;
